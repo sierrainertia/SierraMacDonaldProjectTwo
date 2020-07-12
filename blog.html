@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Boat Ride Adventure</title>
   </head>
-  <body>
+  <body class="blog">
     <header>
       <div class="wrapper">
-        <h1>Blog</h1>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -18,38 +17,14 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+        <div class="title">
+          <h1>Blog</h1>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="wrapper">
-        <div class="leftSideBox">
-          <img
-            src="assets/blog-side-image.jpg"
-            alt="Picture of a boats sails"
-          />
-          <h3>our mission</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            laborum sunt eligendi?
-          </p>
-          <h2>Recent Posts</h2>
-          <ul>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </li>
-          </ul>
-        </div>
-
         <div class="rightSideBox">
           <img src="assets/blog-post-image.jpg" alt="View of side of a boat" />
           <div class="blogPost">
@@ -93,6 +68,33 @@
             </p>
           </div>
         </div>
+        <div class="leftSideBox">
+          <img
+            src="assets/blog-side-image.jpg"
+            alt="Picture of a boats sails"
+          />
+          <h3>our mission</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            laborum sunt eligendi?
+          </p>
+          <h2>Recent Posts</h2>
+          <ul>
+            <li>
+              <p>Lorem ipsum dolor sit.</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit.</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit.</p>
+            </li>
+            <li>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </li>
+          </ul>
+        </div>
+
         <div class="comments">
           <div class="comment1">
             <img src="assets/comment-1.jpg" alt="A persons face" />
@@ -114,9 +116,23 @@
               alias quia libero. Porro animi libero asperiores eveniet sunt?
             </p>
           </div>
-          <form action="submit">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" />
+          <form action="submit" class="commentForm">
+            <input
+              type="text"
+              class="name"
+              name="name"
+              aria-label="Name"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              class="email"
+              name="email"
+              aria-label="Email Address"
+              placeholder="Email Address"
+            />
+            <textarea name="Comment" cols="30" rows="10"></textarea>
+            <input type="submit" value="Click me!" aria-label="Submit button" />
           </form>
         </div>
       </div>

@@ -1,0 +1,79 @@
+.blog {
+  // GENERAL STYLES FOR BLOG PAGE ************
+  // Background colours
+  background-color: var(--iceBlue);
+  footer {
+    background-color: var(--dandelion);
+  }
+
+  //PAGE LAYOUT
+  .wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    // border: 2px solid tomato;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  //   ************ End of general styles for blog **************
+
+  // ********
+  // header
+  // ********
+  header {
+    background-image: url("../assets/blog-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    .wrapper {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    //   Nav Bar styles
+    a {
+      color: white;
+    }
+    // this makes a yellow line appear under hovered nav bar selection
+    li {
+      border-bottom: 3px transparent solid;
+
+      &:hover {
+        border-bottom: 3px solid var(--dandelion);
+      }
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    ul {
+      display: flex;
+      width: 600px;
+      justify-content: space-between;
+      padding: 50px 50px 50px 0;
+    }
+
+    // title styles
+    .title {
+      //   margin: 20px;
+      color: white;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  //*********
+  // Right side layout
+  //*********
+
+  //top image
+  .rightSideBox {
+  }
+}

@@ -1,0 +1,322 @@
+.home {
+  // GENERAL STYLES FOR HOME ***********
+  //BACKGROUND COLOURS
+
+  .section1,
+  .section3 {
+    background-color: var(--iceBlue);
+  }
+
+  .section2,
+  .section4 {
+    background-color: var(--twilightBlue);
+  }
+
+  footer {
+    background-color: var(--dandelion);
+  }
+
+  // PAGE LAYOUT
+  .wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    // border: 2px solid tomato;
+  }
+
+  main p {
+    padding-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // Buttons
+  main a {
+    background-color: var(--dandelion);
+    padding: 5px 10px;
+    color: var(--twilightBlue);
+  }
+
+  // *********** END GENERAL STYLES FOR HOME ***********
+
+  //*****************
+  // HEADER STYLES
+  // ****************
+  header {
+    background-image: url("../assets/home-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    // Header layout
+    .wrapper {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    // Header typography
+    a {
+      color: white;
+    }
+    // this makes a yellow line appear under hovered nav bar selection
+    li {
+      border-bottom: 3px transparent solid;
+
+      &:hover {
+        border-bottom: 3px solid var(--dandelion);
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  ul {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  h1 {
+    margin: 20px;
+    color: var(--dandelion);
+    flex: 1;
+  }
+
+  .headerBottom {
+    display: flex;
+    align-items: flex-end;
+  }
+  .headerBottom .image {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .headerBottom img {
+    margin-right: -122px;
+    margin-bottom: -230px;
+  }
+
+  //**************
+  // SECTION 1
+  // *************
+
+  .section1 {
+    // Section1 General styling
+    h2 {
+      color: var(--twilightBlue);
+    }
+    i {
+      background-color: var(--dandelion);
+      border-radius: 50%;
+      padding: 10px;
+      color: var(--twilightBlue);
+      font-size: 30px;
+      width: 45px;
+      height: 45px;
+    }
+    .info {
+      display: flex;
+      align-content: space-between;
+      flex: 1;
+    }
+  }
+  // Section 1 top
+  .section1Top {
+    padding-top: 200px;
+  }
+
+  //section 1 bottom
+  .section1Bottom {
+    padding: 50px 0;
+  }
+
+  // Top & bottom styles
+  .section1Top,
+  .section1Bottom {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .section1Text {
+    padding-left: 10px;
+    margin: 3px 0;
+  }
+
+  // ************
+  // SECTION 2
+  // *************
+
+  // section 2 general layout & typography
+  .section2 {
+    h3,
+    p {
+      color: white;
+    }
+  }
+
+  // Top and bottom layout
+  .section2Top {
+    display: flex;
+    .info {
+      padding: 100px 50px;
+      text-align: left;
+      flex-basis: 50%;
+    }
+  }
+  .section2Bottom {
+    display: flex;
+    .info {
+      padding: 100px 50px;
+      text-align: right;
+      flex-basis: 50%;
+    }
+  }
+
+  // this is to get the yellow background behind the images to appear
+  .section2 {
+    position: relative;
+    z-index: 1;
+    .section2Top {
+      position: relative;
+      z-index: 1;
+    }
+    .s2Image1 {
+      position: relative;
+      height: max-content;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--dandelion);
+        display: block;
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        z-index: -1;
+      }
+    }
+    .s2Image2 {
+      position: relative;
+      height: max-content;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--dandelion);
+        display: block;
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        z-index: -1;
+      }
+    }
+  }
+
+  // image properties
+  .s2Image1 {
+    flex-basis: 50%;
+    position: relative;
+    margin-top: -20px;
+    margin-left: -129px;
+    height: max-content;
+    // img {
+    // This positions the top image to be outside of the container
+    //   position: absolute;
+    //   top: -20px;
+    //   left: -129px;
+    // }
+  }
+  .s2Image2 {
+    flex-basis: 50%;
+    position: relative;
+    img {
+      // This positions the bottom image to be outside of the container
+      position: absolute;
+      bottom: -20px;
+      right: -120px;
+    }
+  }
+  //************
+  // SECTION 3
+  //************
+
+  // Section 3 Part 1
+  // *****************
+  .section3 {
+    h3 {
+      color: var(--twilightBlue);
+    }
+    .section3pt1 {
+      text-align: center;
+      padding: 50px;
+    }
+  }
+  // section 3 part 2 banner
+  // ***********************
+  .section3pt2 {
+    overflow: hidden;
+  }
+}
+
+//Section 3 part 3
+// ****************
+.section3pt3 {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0;
+  flex-wrap: wrap;
+  .info {
+    width: 66%;
+  }
+}
+
+// This makes the yellow box appear behind the image
+.section3pt3 {
+  position: relative;
+  z-index: 1;
+  .s3Image {
+    height: max-content;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: var(--dandelion);
+      display: block;
+      position: absolute;
+      left: -7px;
+      bottom: -7px;
+      z-index: -1;
+    }
+  }
+}
+// ***********
+// Section 4
+// ***********
+
+.gallery {
+  display: flex;
+  padding: 100px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+// ***********
+// Footer
+// ***********
+
+footer {
+  text-align: center;
+}

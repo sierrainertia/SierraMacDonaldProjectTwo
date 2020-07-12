@@ -86,22 +86,22 @@
   h1 {
     margin: 20px;
     color: var(--dandelion);
-    flex: 1;
   }
 
   .headerBottom {
     display: flex;
+    // this puts the h1 at the bottom Y axis
     align-items: flex-end;
   }
   .headerBottom .image {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-  }
-
-  .headerBottom img {
-    margin-right: -122px;
-    margin-bottom: -230px;
+    position: relative;
+    width: 100%;
+    img {
+      position: absolute;
+      bottom: -100px;
+      right: -21%;
+      overflow: hidden;
+    }
   }
 
   //**************
@@ -178,60 +178,19 @@
       flex-basis: 50%;
     }
   }
-
-  // this is to get the yellow background behind the images to appear
-  .section2 {
-    position: relative;
-    z-index: 1;
-    .section2Top {
-      position: relative;
-      z-index: 1;
-    }
-    .s2Image1 {
-      position: relative;
-      height: max-content;
-      &::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: var(--dandelion);
-        display: block;
-        position: absolute;
-        right: -20px;
-        bottom: -20px;
-        z-index: -1;
-      }
-    }
-    .s2Image2 {
-      position: relative;
-      height: max-content;
-      &::before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: var(--dandelion);
-        display: block;
-        position: absolute;
-        right: -20px;
-        bottom: -20px;
-        z-index: -1;
-      }
-    }
-  }
-
   // image properties
   .s2Image1 {
     flex-basis: 50%;
     position: relative;
-    margin-top: -20px;
-    margin-left: -129px;
     height: max-content;
-    // img {
-    // This positions the top image to be outside of the container
-    //   position: absolute;
-    //   top: -20px;
-    //   left: -129px;
-    // }
+    img {
+      // This positions the top image to be outside of the container
+      position: absolute;
+      top: -30px;
+      left: -115px;
+      // This adds the yellow shadow
+      box-shadow: 20px 20px 0 var(--dandelion);
+    }
   }
   .s2Image2 {
     flex-basis: 50%;
@@ -239,8 +198,10 @@
     img {
       // This positions the bottom image to be outside of the container
       position: absolute;
-      bottom: -20px;
-      right: -120px;
+      bottom: -30px;
+      right: -110px;
+      // This adds the yellow shadow
+      box-shadow: -20px -20px 0 var(--dandelion);
     }
   }
   //************
@@ -278,26 +239,11 @@
 }
 
 // This makes the yellow box appear behind the image
-.section3pt3 {
-  position: relative;
-  z-index: 1;
-  .s3Image {
-    height: max-content;
-    position: relative;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: var(--dandelion);
-      display: block;
-      position: absolute;
-      left: -7px;
-      bottom: -7px;
-      z-index: -1;
-    }
-  }
+.s3Image {
+  height: max-content;
+  box-shadow: -20px 20px 0 var(--dandelion);
 }
+
 // ***********
 // Section 4
 // ***********

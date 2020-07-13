@@ -12,24 +12,9 @@
     background-color: var(--twilightBlue);
   }
 
-  footer {
-    background-color: var(--dandelion);
-  }
-
-  // PAGE LAYOUT
-  .wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    // border: 2px solid tomato;
-  }
-
+  // general rules
   main p {
     padding-bottom: 20px;
-  }
-
-  img {
-    max-width: 100%;
   }
 
   // Buttons
@@ -46,41 +31,16 @@
   // ****************
   header {
     background-image: url("../assets/home-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
 
     // Header layout
     .wrapper {
-      display: flex;
-      height: 100%;
       justify-content: space-between;
-      flex-direction: column;
-    }
-    // Nav bar styles
-    a {
-      color: white;
-    }
-    // this makes a yellow line appear under hovered nav bar selection
-    li {
-      border-bottom: 3px transparent solid;
-
-      &:hover {
-        border-bottom: 3px solid var(--dandelion);
-      }
     }
   }
 
   nav {
     display: flex;
     justify-content: flex-start;
-  }
-
-  ul {
-    display: flex;
-    width: 600px;
-    justify-content: space-between;
-    padding: 50px;
   }
 
   h1 {
@@ -224,45 +184,37 @@
   .section3pt2 {
     overflow: hidden;
   }
-}
 
-//Section 3 part 3
-// ****************
-.section3pt3 {
-  display: flex;
-  justify-content: space-around;
-  padding: 100px 0;
-  flex-wrap: wrap;
-  .info {
-    width: 66%;
+  //Section 3 part 3
+  // ****************
+  .section3pt3 {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0;
+    flex-wrap: wrap;
+    .info {
+      width: 66%;
+    }
   }
-}
 
-// This makes the yellow box appear behind the image
-.s3Image {
-  height: max-content;
-  box-shadow: -20px 20px 0 var(--dandelion);
-}
-
-// ***********
-// Section 4
-// ***********
-
-.gallery {
-  display: flex;
-  padding: 100px 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  img {
-    width: 350px;
-    height: 350px;
+  // This makes the yellow box appear behind the image
+  .s3Image {
+    height: max-content;
+    box-shadow: -20px 20px 0 var(--dandelion);
   }
-}
 
-// ***********
-// Footer
-// ***********
+  // ***********
+  // Section 4
+  // ***********
 
-footer {
-  text-align: center;
+  .gallery {
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
 }

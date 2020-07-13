@@ -4,16 +4,33 @@
   --dandelion: #fdd908;
   --twilightBlue: #0d457f;
 }
+// *****************
+// general page rules
+// ******************
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  // border: 2px solid tomato;
+}
 
+img {
+  max-width: 100%;
+}
+
+// **********
 //typograpby
+// **********
 html {
   font-size: 125%;
 }
+
 h1,
 h2,
 h3,
 h4,
-a {
+a,
+input[type="submit"] {
   font-family: "IM Fell English", serif;
   font-style: italic;
 }
@@ -21,7 +38,8 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+input[type="submit"] {
   text-transform: uppercase;
 }
 
@@ -47,7 +65,8 @@ h4 {
   letter-spacing: 0.8px;
 }
 
-a {
+a,
+input[type="submit"] {
   font-size: 22.4px;
   text-align: center;
   line-height: 41.6px;
@@ -55,7 +74,8 @@ a {
 }
 
 body,
-li a {
+li a,
+textarea {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-style: normal;

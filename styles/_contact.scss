@@ -1,0 +1,21 @@
+.contact {
+  // GENERAL STYLES FOR CONTACT PAGE ************
+  // Background colours
+  background-color: var(--iceBlue);
+
+  // Buttons
+  main a {
+    background-color: var(--dandelion);
+    padding: 5px 10px;
+    color: var(--twilightBlue);
+  }
+
+  header {
+    background-image: url(../assets/contact-header.jpg);
+    height: 500px;
+
+    h1 {
+      color: white;
+    }
+  }
+}

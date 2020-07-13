@@ -2,20 +2,11 @@
   // GENERAL STYLES FOR BLOG PAGE ************
   // Background colours
   background-color: var(--iceBlue);
-  footer {
-    background-color: var(--dandelion);
-  }
 
-  //PAGE LAYOUT
-  .wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    // border: 2px solid tomato;
-  }
-
-  img {
-    max-width: 100%;
+  // font colours
+  h3,
+  h4 {
+    color: var(--twilightBlue);
   }
 
   //   ************ End of general styles for blog **************
@@ -25,39 +16,11 @@
   // ********
   header {
     background-image: url("../assets/blog-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
 
     .wrapper {
       display: flex;
       height: 100%;
       flex-direction: column;
-    }
-
-    //   Nav Bar styles
-    a {
-      color: white;
-    }
-    // this makes a yellow line appear under hovered nav bar selection
-    li {
-      border-bottom: 3px transparent solid;
-
-      &:hover {
-        border-bottom: 3px solid var(--dandelion);
-      }
-    }
-
-    nav {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    ul {
-      display: flex;
-      width: 600px;
-      justify-content: space-between;
-      padding: 50px 50px 50px 0;
     }
 
     // title styles
@@ -69,6 +32,41 @@
     }
   }
 
+  //***********
+  // Left side
+  //***********
+  .leftSection {
+    height: max-content;
+    flex-basis: 30%;
+    margin-right: 100px;
+
+    .leftImage {
+      margin-top: 50px;
+      // this positions it outside of the wrapper
+      margin-left: -120px;
+    }
+    .leftText {
+      background-color: var(--twilightBlue);
+      padding: 20px;
+
+      color: white;
+    }
+    h4 {
+      padding-top: 30px;
+      text-align: center;
+
+      color: var(--dandelion);
+    }
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+    li {
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+
   //*********
   // Right side layout
   //*********
@@ -77,10 +75,7 @@
   .mainContainer {
     display: flex;
     // flex-direction: row-reverse;
-    .leftSection {
-      flex-basis: 30%;
-      margin-right: 60px;
-    }
+
     .rightSide {
       display: flex;
       flex-direction: column;
@@ -98,6 +93,7 @@
     }
   }
 
+  //***********************
   // Blog & comments section
   // ***********************
   .blogPost {
@@ -116,5 +112,76 @@
     p {
       padding-bottom: 20px;
     }
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+  .commentContainer {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 10px;
+      // this is to fix spacing issues with the header and images and allows them to line up
+      line-height: 1;
+    }
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 40px;
+
+      img {
+        max-width: initial;
+        margin-right: 40px;
+      }
+      .commentText {
+        padding-bottom: 40px;
+      }
+    }
+  }
+  //*************
+  //Contact form
+  //*************
+  .commentForm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .name {
+    margin-right: 30px;
+    flex-basis: calc(50% - 30px);
+  }
+
+  .email {
+    flex-basis: 50%;
+  }
+  .name,
+  .email {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--dandelion);
+    padding: 20px;
+  }
+
+  textarea.comment {
+    border: 2px solid var(--dandelion);
+    background-color: transparent;
+    border-radius: 4px;
+
+    padding: 20px;
+    margin: 40px auto;
+    flex-basis: 100%;
+  }
+
+  input[type="submit"] {
+    background-color: var(--twilightBlue);
+    color: var(--dandelion);
+    text-align: center;
+
+    width: 100%;
+    margin-bottom: 75px;
+    padding: 5px 10px;
+
+    border: none;
   }
 }

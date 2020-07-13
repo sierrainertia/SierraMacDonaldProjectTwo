@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Boat Ride Adventure</title>
   </head>
   <body class="blog">
     <header>
       <div class="wrapper">
+        <!-- *********** top nav bar *************-->
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,6 +22,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+        <!-- ************* Header *****************-->
         <div class="title">
           <h1>Blog</h1>
         </div>
@@ -25,33 +31,39 @@
 
     <main>
       <div class="wrapper mainContainer">
+        <!--  ********* Left section  *****************-->
         <section class="leftSection">
-          <img
-            src="assets/blog-side-image.jpg"
-            alt="Picture of a boats sails"
-          />
-          <h3>our mission</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            laborum sunt eligendi?
-          </p>
-          <h2>Recent Posts</h2>
-          <ul>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit.</p>
-            </li>
-            <li>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </li>
-          </ul>
+          <div class="leftImage">
+            <img
+              src="assets/blog-side-image.jpg"
+              alt="Picture of a boats sails"
+            />
+          </div>
+          <div class="leftText">
+            <h4>our mission</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              laborum sunt eligendi?
+            </p>
+            <h4>Recent Posts</h4>
+            <ul>
+              <li>
+                Fanny pack street art
+              </li>
+              <li>
+                authentic green juice
+              </li>
+              <li>
+                raw denim pickled bun
+              </li>
+              <li>
+                jean shorts man vape
+              </li>
+            </ul>
+          </div>
         </section>
 
+        <!-- ************ Right Section ************* -->
         <div class="rightSide">
           <section class="rightTopSection">
             <div class="rightImage">
@@ -62,6 +74,7 @@
             </div>
           </section>
 
+          <!-- *********** Blog post ******************* -->
           <section class="blogPost">
             <h2>Next destination</h2>
             <p>Monday October 30, 2919 by Sulaire</p>
@@ -103,50 +116,68 @@
             </p>
           </section>
 
-          <section class="comments">
-            <div class="comment1">
-              <img src="assets/comment-1.jpg" alt="A persons face" />
-              <h4>Tuesday October 9th, 2019 by Ali</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita officiis obcaecati amet veniam architecto veritatis non
-                eligendi incidunt quam quibusdam. Delectus consequuntur
-                explicabo consectetur sint iste animi molestiae earum expedita?
-              </p>
+          <!-- ********** Comment section ************** -->
+          <h3>Comments:</h3>
+          <section class="commentContainer">
+            <div class="comment">
+              <div class="commentImage">
+                <img src="assets/comment-1.jpg" alt="A persons face" />
+              </div>
+              <div class="commentText">
+                <h4>Tuesday October 9th, 2019 by Ali</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Expedita officiis obcaecati amet veniam architecto veritatis
+                  non eligendi incidunt quam quibusdam.
+                </p>
+              </div>
             </div>
-            <div class="comment2">
-              <img src="assets/comment-2.jpg" alt="Another persons face" />
-              <h4>Wednesday October 10th, 2019 by Lisa</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Perspiciatis rerum, accusantium voluptatum voluptas,
-                exercitationem quisquam magnam molestiae, eos sed quas incidunt
-                alias quia libero. Porro animi libero asperiores eveniet sunt?
-              </p>
+            <div class="comment">
+              <div class="commentImage">
+                <img src="assets/comment-2.jpg" alt="Another persons face" />
+              </div>
+              <div class="commentText">
+                <h4>Wednesday October 10th, 2019 by Lisa</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Perspiciatis rerum, accusantium voluptatum voluptas,
+                  exercitationem quisquam magnam molestiae, eos sed quas
+                  incidunt alias quia libero.
+                </p>
+              </div>
             </div>
-            <form action="submit" class="commentForm">
-              <input
-                type="text"
-                class="name"
-                name="name"
-                aria-label="Name"
-                placeholder="Name"
-              />
-              <input
-                type="email"
-                class="email"
-                name="email"
-                aria-label="Email Address"
-                placeholder="Email Address"
-              />
-              <textarea name="Comment" cols="30" rows="10"></textarea>
-              <input
-                type="submit"
-                value="Click me!"
-                aria-label="Submit button"
-              />
-            </form>
           </section>
+          <!-- *********** Comment Form **************** -->
+          <form action="submit" class="commentForm">
+            <input
+              type="text"
+              class="name"
+              name="name"
+              aria-label="Name"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              class="email"
+              name="email"
+              aria-label="Email Address"
+              placeholder="Email Address"
+            />
+            <textarea
+              class="comment"
+              name="comment"
+              placeholder="Comment"
+              cols="30"
+              rows="10"
+              aria-label="Comment"
+            ></textarea>
+            <input
+              class="submit"
+              type="submit"
+              value="Post comment"
+              aria-label="Submit button"
+            />
+          </form>
         </div>
       </div>
     </main>

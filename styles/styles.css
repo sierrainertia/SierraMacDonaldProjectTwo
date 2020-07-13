@@ -344,6 +344,16 @@ textarea {
   --twilightBlue: #0d457f;
 }
 
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
 html {
   font-size: 125%;
 }
@@ -352,7 +362,8 @@ h1,
 h2,
 h3,
 h4,
-a {
+a,
+input[type="submit"] {
   font-family: "IM Fell English", serif;
   font-style: italic;
 }
@@ -360,7 +371,8 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+input[type="submit"] {
   text-transform: uppercase;
 }
 
@@ -386,7 +398,8 @@ h4 {
   letter-spacing: 0.8px;
 }
 
-a {
+a,
+input[type="submit"] {
   font-size: 22.4px;
   text-align: center;
   line-height: 41.6px;
@@ -394,7 +407,8 @@ a {
 }
 
 body,
-li a {
+li a,
+textarea {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   font-style: normal;
@@ -413,6 +427,61 @@ body {
   line-height: 28px;
 }
 
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+nav a {
+  color: white;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 50px 50px 0;
+}
+
+nav ul li {
+  border-bottom: 3px transparent solid;
+}
+
+nav ul li:hover {
+  border-bottom: 3px solid var(--dandelion);
+}
+
+footer p {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--dandelion);
+}
+
 .home .section1,
 .home .section3 {
   background-color: var(--iceBlue);
@@ -423,22 +492,8 @@ body {
   background-color: var(--twilightBlue);
 }
 
-.home footer {
-  background-color: var(--dandelion);
-}
-
-.home .wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-}
-
 .home main p {
   padding-bottom: 20px;
-}
-
-.home img {
-  max-width: 100%;
 }
 
 .home main a {
@@ -449,35 +504,12 @@ body {
 
 .home header {
   background-image: url("../assets/home-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
 }
 
 .home header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.home header a {
-  color: white;
-}
-
-.home header li {
-  border-bottom: 3px transparent solid;
-}
-
-.home header li:hover {
-  border-bottom: 3px solid var(--dandelion);
 }
 
 .home nav {
@@ -487,17 +519,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-.home ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 600px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 50px;
 }
 
 .home h1 {
@@ -648,7 +669,7 @@ body {
   overflow: hidden;
 }
 
-.section3pt3 {
+.home .section3pt3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,11 +680,11 @@ body {
       flex-wrap: wrap;
 }
 
-.section3pt3 .info {
+.home .section3pt3 .info {
   width: 66%;
 }
 
-.s3Image {
+.home .s3Image {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -671,7 +692,7 @@ body {
           box-shadow: -20px 20px 0 var(--dandelion);
 }
 
-.gallery {
+.home .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,38 +704,22 @@ body {
       flex-wrap: wrap;
 }
 
-.gallery img {
+.home .gallery img {
   width: 350px;
   height: 350px;
-}
-
-footer {
-  text-align: center;
 }
 
 .blog {
   background-color: var(--iceBlue);
 }
 
-.blog footer {
-  background-color: var(--dandelion);
-}
-
-.blog .wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.blog img {
-  max-width: 100%;
+.blog h3,
+.blog h4 {
+  color: var(--twilightBlue);
 }
 
 .blog header {
   background-image: url("../assets/blog-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 600px;
 }
 
 .blog header .wrapper {
@@ -728,38 +733,6 @@ footer {
           flex-direction: column;
 }
 
-.blog header a {
-  color: white;
-}
-
-.blog header li {
-  border-bottom: 3px transparent solid;
-}
-
-.blog header li:hover {
-  border-bottom: 3px solid var(--dandelion);
-}
-
-.blog header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.blog header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 600px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 50px 50px 50px 0;
-}
-
 .blog header .title {
   color: white;
   display: -webkit-box;
@@ -770,16 +743,46 @@ footer {
           align-items: flex-start;
 }
 
+.blog .leftSection {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-right: 100px;
+}
+
+.blog .leftSection .leftImage {
+  margin-top: 50px;
+  margin-left: -120px;
+}
+
+.blog .leftSection .leftText {
+  background-color: var(--twilightBlue);
+  padding: 20px;
+  color: white;
+}
+
+.blog .leftSection h4 {
+  padding-top: 30px;
+  text-align: center;
+  color: var(--dandelion);
+}
+
+.blog .leftSection ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.blog .leftSection li {
+  font-weight: 400;
+  text-align: left;
+}
+
 .blog .mainContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.blog .mainContainer .leftSection {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  margin-right: 60px;
 }
 
 .blog .mainContainer .rightSide {
@@ -818,4 +821,108 @@ footer {
 
 .blog .blogPost p {
   padding-bottom: 20px;
+}
+
+.blog h3 {
+  margin-top: 40px;
+}
+
+.blog .commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog .commentContainer h4 {
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.blog .commentContainer .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+}
+
+.blog .commentContainer .comment img {
+  max-width: initial;
+  margin-right: 40px;
+}
+
+.blog .commentContainer .comment .commentText {
+  padding-bottom: 40px;
+}
+
+.blog .commentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog .name {
+  margin-right: 30px;
+  -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+}
+
+.blog .email {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.blog .name,
+.blog .email {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--dandelion);
+  padding: 20px;
+}
+
+.blog textarea.comment {
+  border: 2px solid var(--dandelion);
+  background-color: transparent;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 40px auto;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.blog input[type="submit"] {
+  background-color: var(--twilightBlue);
+  color: var(--dandelion);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 75px;
+  padding: 5px 10px;
+  border: none;
+}
+
+.contact {
+  background-color: var(--iceBlue);
+}
+
+.contact main a {
+  background-color: var(--dandelion);
+  padding: 5px 10px;
+  color: var(--twilightBlue);
+}
+
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+  height: 500px;
+}
+
+.contact header h1 {
+  color: white;
 }

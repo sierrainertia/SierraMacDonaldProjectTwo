@@ -1,0 +1,40 @@
+// *************
+// Header styles
+// **************
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+
+  // layout
+  .wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+}
+// Nav bar styles
+nav {
+  display: flex;
+  justify-content: flex-start;
+
+  a {
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    padding: 50px 50px 50px 0;
+
+    li {
+      border-bottom: 3px transparent solid;
+
+      &:hover {
+        // this makes a yellow line appear under hovered nav bar selection
+        border-bottom: 3px solid var(--dandelion);
+      }
+    }
+  }
+}

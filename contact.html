@@ -30,17 +30,22 @@
       </div>
     </header>
     <main>
-      <div class="wrapper">
-        <!--**************** Right Section ******************* -->
-        <section class="rightSection">
+      <div class="wrapper mainContent">
+        <!--**************** Left Section ******************* -->
+        <section class="leftSection">
           <div class="iconContainer">
+            <span class="sr-Only">Facebook</span>
             <i class="fa fa-facebook-f"></i>
+            <span class="sr-Only">Instagram</span>
             <i class="fa fa-instagram"></i>
+            <span class="sr-Only">Twitter</span>
             <i class="fa fa-twitter"></i>
+            <span class="sr-Only">whatsapp</span>
             <i class="fa fa-whatsapp"></i>
+
+            <p>info@email.com</p>
           </div>
           <div class="info">
-            <p>info@email.com</p>
             <p>123 - 456 - 7890</p>
             <p>123 Queen Street West, Unit 10</p>
             <p>Toronto, Ontario</p>
@@ -48,8 +53,8 @@
           </div>
         </section>
 
-        <!--***************** Left Section *********************** -->
-        <section class="LeftSection">
+        <!--***************** Right Section *********************** -->
+        <section class="rightSection">
           <form action="submit" class="commentForm">
             <input
               type="text"
@@ -70,13 +75,13 @@
               name="comment"
               placeholder="Comment"
               cols="30"
-              rows="10"
+              rows="5"
               aria-label="Comment"
             ></textarea>
             <input
               class="submit"
               type="submit"
-              value="Post comment"
+              value="Submit"
               aria-label="Submit button"
             />
           </form>

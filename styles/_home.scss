@@ -22,6 +22,7 @@
     background-color: var(--dandelion);
     padding: 5px 10px;
     color: var(--twilightBlue);
+    display: inline-block;
   }
 
   // *********** END GENERAL STYLES FOR HOME ***********
@@ -33,37 +34,39 @@
     background-image: url("../assets/home-header.jpg");
 
     // Header layout
-    .wrapper {
+    .flexing {
       justify-content: space-between;
     }
-  }
 
-  nav {
-    display: flex;
-    justify-content: flex-start;
-  }
+    nav {
+      display: flex;
+      justify-content: flex-start;
+    }
 
-  h1 {
-    margin: 20px;
-    color: var(--dandelion);
+    h1 {
+      margin: 20px;
+      color: var(--dandelion);
+    }
   }
 
   .headerBottom {
     display: flex;
     // this puts the h1 at the bottom Y axis
     align-items: flex-end;
-  }
-  .headerBottom .image {
-    position: relative;
-    width: 100%;
+    
+    .image {
+    // position: relative;
+    // width: 100%;
+    flex-basis: 50%;
     img {
-      position: absolute;
-      bottom: -100px;
-      right: -21%;
-      overflow: hidden;
+      // this positions the image inside of header outside slightly
+      // position: absolute;
+      // bottom: -100px;
+      // right: -21%;
+      // overflow: hidden;
     }
   }
-
+ 
   //**************
   // SECTION 1
   // *************

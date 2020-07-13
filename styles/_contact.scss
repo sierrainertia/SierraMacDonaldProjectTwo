@@ -10,6 +10,10 @@
     color: var(--twilightBlue);
   }
 
+  //*************
+  //Header Styles
+  //**************
+
   header {
     background-image: url(../assets/contact-header.jpg);
     height: 500px;
@@ -17,5 +21,95 @@
     h1 {
       color: white;
     }
+  }
+
+  //************
+  // Main styles
+  //***********
+
+  .mainContent {
+    display: flex;
+    justify-content: space-between;
+  }
+  //**********left section*************
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .iconContainer {
+      margin-bottom: 30px;
+      i {
+        padding: 10px 5% 10px 0;
+        font-size: 25px;
+        color: var(--twilightBlue);
+      }
+      // this code is from juno bootcamp notes to hide elements but make them visible to screen readers
+      .sr-Only:not(:focus):not(:active) {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap; /* added line */
+      }
+    }
+  }
+  //*********** Right Section **********
+  .rightSection {
+    flex-basis: 60%;
+  }
+
+  //********Contact form*********
+
+  .commentForm {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--twilightBlue);
+    padding: 30px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+
+    // This adds the yellow box shadow
+    box-shadow: 20px 20px 0 var(--dandelion);
+  }
+
+  .name {
+    margin-right: 30px;
+    flex-basis: calc(50% - 30px);
+  }
+
+  .email {
+    flex-basis: 50%;
+  }
+  .name,
+  .email {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--dandelion);
+    padding: 20px;
+  }
+
+  textarea.comment {
+    border: 2px solid var(--dandelion);
+    background-color: transparent;
+    border-radius: 4px;
+
+    padding: 20px;
+    margin: 40px auto;
+    flex-basis: 100%;
+  }
+
+  input[type="submit"] {
+    background-color: var(--dandelion);
+    color: var(--twilightBlue);
+    text-align: center;
+
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 5px 10px;
+
+    border: none;
   }
 }

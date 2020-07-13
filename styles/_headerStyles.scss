@@ -7,7 +7,7 @@ header {
   height: 600px;
 
   // layout
-  .wrapper {
+  .flexing {
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -18,18 +18,17 @@ nav {
   display: flex;
   justify-content: flex-start;
 
-  a {
-    color: white;
-  }
-
   ul {
     display: flex;
     width: 600px;
     justify-content: space-between;
     padding: 50px 50px 50px 0;
 
-    li {
+    a {
       border-bottom: 3px transparent solid;
+      padding-bottom: 5px;
+      display: inline-block;
+      color: white;
 
       &:hover {
         // this makes a yellow line appear under hovered nav bar selection

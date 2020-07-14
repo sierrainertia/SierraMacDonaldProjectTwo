@@ -34,13 +34,12 @@
     background-image: url("../assets/home-header.jpg");
     position: relative;
 
-    @include bp3 {
-      height: 400px;
-    }
-
     // Header layout
     .flexing {
+      display: flex;
       justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
     }
 
     h1 {

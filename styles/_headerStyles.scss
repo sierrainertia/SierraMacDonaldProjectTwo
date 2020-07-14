@@ -6,11 +6,8 @@ header {
   background-size: cover;
   height: 600px;
 
-  // layout
-  .flexing {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+  @include bp3 {
+    height: 400px;
   }
 }
 // Nav bar styles

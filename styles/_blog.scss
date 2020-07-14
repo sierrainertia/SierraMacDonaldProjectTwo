@@ -28,10 +28,9 @@
       //   margin: 20px;
       color: white;
       display: flex;
-      flex-direction: column;
-
+      align-items: flex-end;
       @include bp3 {
-        align-items: flex-end;
+        flex: 1;
       }
     }
   }
@@ -39,28 +38,64 @@
   //***********
   // Left side
   //***********
+
+  .wrapper {
+    @include bp1 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
   .leftSection {
     height: max-content;
     flex-basis: 30%;
     margin-right: 100px;
 
+    @include bp1 {
+      display: flex;
+    }
+
+    @include bp2 {
+      flex-direction: column;
+    }
+
     .leftImage {
       margin-top: 50px;
       // this positions it outside of the wrapper
       margin-left: -120px;
+
+      @include bp1 {
+        margin-top: unset;
+        margin-left: unset;
+        width: 100%;
+
+        flex: 1;
+      }
     }
     .leftText {
       background-color: var(--twilightBlue);
       padding: 20px;
 
       color: white;
+
+      @include bp1 {
+        flex: 1;
+      }
+
+      @include bp3 {
+        font-size: 18px;
+      }
     }
     h4 {
       padding-top: 30px;
       text-align: center;
 
       color: var(--dandelion);
+
+      @include bp2 {
+        text-align: left;
+      }
     }
+
     ul {
       list-style-type: disc;
       list-style-position: inside;
@@ -68,6 +103,10 @@
     li {
       font-weight: 400;
       text-align: left;
+
+      @include bp3 {
+        font-size: 18px;
+      }
     }
   }
 
@@ -78,13 +117,17 @@
   //top image
   .mainContainer {
     display: flex;
-    // flex-direction: row-reverse;
 
     .rightSide {
       display: flex;
       flex-direction: column;
       flex-basis: 70%;
       margin-left: 60px;
+
+      @include bp1 {
+        align-items: center;
+        margin-left: unset;
+      }
     }
     .rightImage {
       //   this positions the image outside of the wrapper
@@ -94,10 +137,18 @@
 
       // This adds the yellow box shadow
       box-shadow: -20px 20px 0 var(--dandelion);
+
+      @include bp1 {
+        margin-top: unset;
+        margin-left: unset;
+        box-shadow: none;
+
+        padding-top: 40px;
+        width: 100%;
+      }
     }
   }
 
-  //***********************
   // Blog & comments section
   // ***********************
   .blogPost {
@@ -108,13 +159,25 @@
     padding: 40px;
     text-align: left;
 
+    @include bp3 {
+      padding: 15px;
+    }
+
     h2 {
       padding-bottom: 30px;
       color: var(--twilightBlue);
+
+      @include bp3 {
+        font-size: 35px;
+      }
     }
 
     p {
       padding-bottom: 20px;
+
+      @include bp3 {
+        font-size: 18px;
+      }
     }
   }
 
@@ -128,18 +191,34 @@
       margin-bottom: 10px;
       // this is to fix spacing issues with the header and images and allows them to line up
       line-height: 1;
+
+      @include bp3 {
+        font-size: 20px;
+      }
     }
     .comment {
       display: flex;
       align-items: flex-start;
       margin-top: 40px;
 
+      @include bp3 {
+        flex-direction: column;
+      }
+
       img {
         max-width: initial;
         margin-right: 40px;
+
+        @include bp3 {
+          padding-bottom: 10px;
+        }
       }
       .commentText {
         padding-bottom: 40px;
+
+        @include bp3 {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -175,6 +254,10 @@
     padding: 20px;
     margin: 40px auto;
     flex-basis: 100%;
+
+    @include bp3 {
+      max-width: 250px;
+    }
   }
 
   input[type="submit"] {

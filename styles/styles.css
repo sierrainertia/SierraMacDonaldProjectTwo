@@ -1235,6 +1235,46 @@ footer p {
   color: white;
 }
 
+@media (max-width: 1140px) {
+  .contact header h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 890px) {
+  .contact header h1 {
+    text-align: left;
+    font-size: 50px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 530px) {
+  .contact header h1 {
+    font-size: 35px;
+    line-height: 1.5;
+  }
+}
+
+.contact header .wrapper {
+  height: 100%;
+}
+
+@media (max-width: 530px) {
+  .contact header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .contact .mainContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1242,6 +1282,15 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1140px) {
+  .contact .mainContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .contact .leftSection {
@@ -1298,6 +1347,15 @@ footer p {
           box-shadow: 20px 20px 0 var(--dandelion);
 }
 
+@media (max-width: 1140px) {
+  .contact .commentForm {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: unset;
+  }
+}
+
 .contact .name {
   margin-right: 30px;
   -ms-flex-preferred-size: calc(50% - 30px);
@@ -1315,11 +1373,14 @@ footer p {
   border: none;
   border-bottom: 2px solid var(--dandelion);
   padding: 20px;
+  color: white;
+  max-width: 230px;
 }
 
 .contact textarea.comment {
   border: 2px solid var(--dandelion);
   background-color: transparent;
+  color: white;
   border-radius: 4px;
   padding: 20px;
   margin: 40px auto;

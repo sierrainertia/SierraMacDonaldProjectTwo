@@ -20,6 +20,31 @@
 
     h1 {
       color: white;
+
+      @include bp1 {
+        font-size: 60px;
+      }
+
+      @include bp2 {
+        text-align: left;
+        font-size: 50px;
+        width: 80%;
+      }
+
+      @include bp3 {
+        font-size: 35px;
+        line-height: 1.5;
+      }
+    }
+
+    .wrapper {
+      height: 100%;
+
+      @include bp3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -30,6 +55,10 @@
   .mainContent {
     display: flex;
     justify-content: space-between;
+
+    @include bp1 {
+      flex-direction: column-reverse;
+    }
   }
   //**********left section*************
 
@@ -37,6 +66,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .iconContainer {
       margin-bottom: 30px;
       i {
@@ -44,6 +74,7 @@
         font-size: 25px;
         color: var(--twilightBlue);
       }
+
       // this code is from juno bootcamp notes to hide elements but make them visible to screen readers
       .sr-Only:not(:focus):not(:active) {
         position: absolute !important;
@@ -73,6 +104,12 @@
 
     // This adds the yellow box shadow
     box-shadow: 20px 20px 0 var(--dandelion);
+
+    @include bp1 {
+      box-shadow: none;
+      margin-top: 20px;
+      margin-bottom: unset;
+    }
   }
 
   .name {
@@ -89,11 +126,15 @@
     border: none;
     border-bottom: 2px solid var(--dandelion);
     padding: 20px;
+    color: white;
+
+    max-width: 230px;
   }
 
   textarea.comment {
     border: 2px solid var(--dandelion);
     background-color: transparent;
+    color: white;
     border-radius: 4px;
 
     padding: 20px;

@@ -1,0 +1,24 @@
+:root {
+  --iceBlue: #eafefc;
+  --dandelion: #fdd908;
+  --twilightBlue: #0d457f;
+}
+
+// resizing mixins
+@mixin bp1 {
+  @media (max-width: 1140px) {
+    @content;
+  }
+}
+
+@mixin bp2 {
+  @media (max-width: 890px) {
+    @content;
+  }
+}
+
+@mixin bp3 {
+  @media (max-width: 530px) {
+    @content;
+  }
+}

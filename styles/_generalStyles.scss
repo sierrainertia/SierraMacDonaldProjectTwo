@@ -1,9 +1,3 @@
-//Variables Section
-:root {
-  --iceBlue: #eafefc;
-  --dandelion: #fdd908;
-  --twilightBlue: #0d457f;
-}
 // *****************
 // general page rules
 // ******************
@@ -33,14 +27,12 @@ a,
 input[type="submit"] {
   font-family: "IM Fell English", serif;
   font-style: italic;
+  text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-input[type="submit"] {
-  text-transform: uppercase;
+a {
+  font-family: "IM Fell English", serif;
+  font-style: italic;
 }
 
 h1 {

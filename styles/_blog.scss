@@ -28,7 +28,11 @@
       //   margin: 20px;
       color: white;
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
+
+      @include bp3 {
+        align-items: flex-end;
+      }
     }
   }
 

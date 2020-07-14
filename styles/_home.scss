@@ -32,41 +32,60 @@
   // ****************
   header {
     background-image: url("../assets/home-header.jpg");
+    position: relative;
+
+    @include bp3 {
+      height: 400px;
+    }
 
     // Header layout
     .flexing {
       justify-content: space-between;
     }
 
-    nav {
-      display: flex;
-      justify-content: flex-start;
-    }
-
     h1 {
+      width: 50%;
       margin: 20px;
       color: var(--dandelion);
+
+      @include bp1 {
+        font-size: 60px;
+      }
+
+      @include bp2 {
+        text-align: left;
+        font-size: 50px;
+        width: 80%;
+      }
+
+      @include bp3 {
+        font-size: 35px;
+        line-height: 1.5;
+      }
+    }
+
+    // Making the big boat fit on the page >:(
+    .image {
+      height: max-content;
+
+      position: absolute;
+      right: 0;
+      left: 50%;
+      top: 200px;
+
+      @include bp1 {
+        top: unset;
+        bottom: -40px;
+      }
+      @include bp2 {
+        display: none;
+      }
     }
   }
 
-  .headerBottom {
-    display: flex;
-    // this puts the h1 at the bottom Y axis
-    align-items: flex-end;
-    
-    .image {
-    // position: relative;
-    // width: 100%;
-    flex-basis: 50%;
-    img {
-      // this positions the image inside of header outside slightly
-      // position: absolute;
-      // bottom: -100px;
-      // right: -21%;
-      // overflow: hidden;
-    }
-  }
- 
+  // .headerBottom {
+  //   display: flex;
+  // }
   //**************
   // SECTION 1
   // *************
@@ -75,6 +94,10 @@
     // Section1 General styling
     h2 {
       color: var(--twilightBlue);
+
+      @include bp3 {
+        font-size: 30px;
+      }
     }
     i {
       background-color: var(--dandelion);
@@ -94,22 +117,37 @@
   // Section 1 top
   .section1Top {
     padding-top: 200px;
+
+    @include bp1 {
+      padding-top: 50px;
+    }
   }
 
   //section 1 bottom
   .section1Bottom {
     padding: 50px 0;
+
+    @include bp3 {
+      padding-top: 0;
+    }
   }
 
   // Top & bottom styles
   .section1Top,
   .section1Bottom {
-    flex-wrap: wrap;
     display: flex;
+
+    @include bp2 {
+      flex-direction: column;
+    }
   }
   .section1Text {
     padding-left: 10px;
     margin: 3px 0;
+
+    @include bp3 {
+      font-size: 18px;
+    }
   }
 
   // ************
@@ -118,27 +156,53 @@
 
   // section 2 general layout & typography
   .section2 {
-    h3,
+    h3 {
+      color: white;
+
+      @include bp3 {
+        font-size: 25px;
+      }
+    }
     p {
       color: white;
+
+      @include bp3 {
+        font-size: 18px;
+      }
     }
   }
 
   // Top and bottom layout
   .section2Top {
     display: flex;
+
     .info {
       padding: 100px 50px;
       text-align: left;
       flex-basis: 50%;
     }
+    @include bp1 {
+      flex-direction: column;
+
+      .info {
+        padding: 50px;
+      }
+    }
   }
   .section2Bottom {
     display: flex;
+
     .info {
       padding: 100px 50px;
       text-align: right;
       flex-basis: 50%;
+    }
+
+    @include bp1 {
+      flex-direction: column-reverse;
+      .info {
+        padding: 50px;
+      }
     }
   }
   // image properties
@@ -153,6 +217,12 @@
       left: -115px;
       // This adds the yellow shadow
       box-shadow: 20px 20px 0 var(--dandelion);
+
+      @include bp1 {
+        position: unset;
+        box-shadow: none;
+        width: 100%;
+      }
     }
   }
   .s2Image2 {
@@ -165,6 +235,12 @@
       right: -110px;
       // This adds the yellow shadow
       box-shadow: -20px -20px 0 var(--dandelion);
+
+      @include bp1 {
+        position: unset;
+        box-shadow: none;
+        width: 100%;
+      }
     }
   }
   //************
@@ -176,10 +252,18 @@
   .section3 {
     h3 {
       color: var(--twilightBlue);
+
+      @include bp3 {
+        font-size: 25px;
+      }
     }
     .section3pt1 {
       text-align: center;
       padding: 50px;
+
+      @include bp3 {
+        font-size: 18px;
+      }
     }
   }
   // section 3 part 2 banner
@@ -197,6 +281,17 @@
     flex-wrap: wrap;
     .info {
       width: 66%;
+
+      @include bp1 {
+        width: 100%;
+      }
+    }
+    @include bp1 {
+      flex-direction: column;
+    }
+
+    @include bp3 {
+      font-size: 18px;
     }
   }
 
@@ -204,6 +299,10 @@
   .s3Image {
     height: max-content;
     box-shadow: -20px 20px 0 var(--dandelion);
+    @include bp1 {
+      box-shadow: none;
+      margin-bottom: 20px;
+    }
   }
 
   // ***********
@@ -214,10 +313,14 @@
     display: flex;
     padding: 100px 0;
     justify-content: space-between;
-    flex-wrap: wrap;
+
     img {
-      width: 350px;
-      height: 350px;
+      width: 33%;
     }
+
+    // @include bp1 {
+    //   flex-direction: column;
+    //   width: 100%;
+    // }
   }
 }

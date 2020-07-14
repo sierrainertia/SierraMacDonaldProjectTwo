@@ -14,15 +14,31 @@ header {
   }
 }
 // Nav bar styles
+
 nav {
   display: flex;
   justify-content: flex-start;
+
+  .hamburger {
+    display: none;
+
+    @include bp3 {
+      margin-top: 30px;
+      font-size: 40px;
+      display: block;
+      color: white;
+    }
+  }
 
   ul {
     display: flex;
     width: 600px;
     justify-content: space-between;
     padding: 50px 50px 50px 0;
+
+    @include bp3 {
+      display: none;
+    }
 
     a {
       border-bottom: 3px transparent solid;
